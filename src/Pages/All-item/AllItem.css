@@ -1,0 +1,149 @@
+.all-main{
+    display: flex;
+    margin-top: 20px;
+}
+.all-header{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+.all-menu{
+    width: 100%;
+    display: flex;
+    color: var(--text-color);
+}
+.all-item{
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+.all-item-name{
+    font-size: 1.4rem;
+}
+.app__container{
+    width: 100%;
+    padding-top: calc(var(--header-height) + 20px);
+
+}
+.all-trade{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.all-select{
+    margin: 10px 0;
+}
+.checkbox{
+    margin-right: 10px;
+}
+.all-color__pick{
+    display: flex;
+    flex-wrap: wrap ;
+    flex-direction: row;
+}
+.all-color__pick-item{
+    height: 35px;
+    width: 35px;
+    margin: 5px 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    border-radius: 3px;    
+    border: 1px solid #c3c3c3;
+
+}
+
+
+.all-select{
+    height: 34px;
+    margin-left: 6px;
+
+}
+
+.active{
+    border: solid 3px black;
+  }
+/* item */
+.all-menu_list{
+   
+    width: 100%;
+}
+.all-menu_list-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.all-menu__item{
+    color: var(--text-color);
+    padding: 10px;
+    border: 1px solid #ebebeb;
+    margin: 10px 6px;
+  
+}
+.all-menu__item:hover{
+    transform: translateX(1px);
+
+}
+
+.all-menu__item-link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 300;
+}
+.all-menu__item-link:hover{
+    cursor: pointer;
+}
+
+.all-menu__item-link-img{
+    width: 100%;
+}
+.all-menu__item-link-title{
+    margin: 10px 0 10px 0;
+}
+.all-menu__item-prices{
+    font-size: 1.4rem;
+    display: flex;
+}
+.all-menu__item-price-sale{
+    color: burlywood;
+    text-decoration: line-through;
+    margin-right: 6px;
+
+}
+.all-menu__item-price{
+    color: var(--primary-color);
+
+}
+.pagination-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination{
+    list-style: none;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 20px 0;
+    height: 40px;
+    /* width: 100%; */
+}
+.pagination > li{
+    list-style: none;
+    font-size: 1.6rem;
+   
+    
+}
+.pagination > li > a{
+    text-decoration: none;
+    margin: 0 20px;
+    color: black;
+
+}
+.pagination > li > a:focus{
+    /* color: red; */
+   color: var(--primary-color);
+}

@@ -1,0 +1,29 @@
+
+  .mt-15{
+    margin-top: 15px;
+  }
+  
+  .ml-0{
+    margin-left: 0;
+  }
+  .mr-5{
+    margin-right: 5px;
+  }
+  .sort_selected::after{
+    content: '\f00c';
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0 0 0 10px;
+    display: inline-block;
+  }
+
+  .text-center{
+    text-align: center;
+  }
+  .app__container{
+    font-size: 13px;
+  }
+  .mb-20{
+    padding-bottom: 20px;
+  }
