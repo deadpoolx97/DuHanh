@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
-import Search from './Search';
-import TaskSortControl from './TaskSortControl';
+import React, { Component } from "react";
 
 class TaskControl extends Component {
-    render() {
-        return (
-            <div className='row mt-15 ml-0'>
-                {/* <Search
+  render() {
+    return (
+      <div className="row mt-15 ml-0">
+        {/* <Search
                     onSearch={this.props.onSearch}
                 /> */}
-                {/* <TaskSortControl
+        {/* <TaskSortControl
                     onSort={this.props.onSort}
                     sortBy={this.props.sortBy}
                     sortValue={this.props.sortValue}
                 /> */}
-            </div>
-        );
-    }
+      </div>
+    );
+  }
 }
 
 export default TaskControl;

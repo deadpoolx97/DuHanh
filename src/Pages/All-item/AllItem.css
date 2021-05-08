@@ -36,6 +36,7 @@
 }
 .checkbox{
     margin-right: 10px;
+    cursor: pointer;
 }
 .all-color__pick{
     display: flex;

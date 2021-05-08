@@ -3,105 +3,12 @@ import "./Main.css";
 import { Link } from "react-router-dom";
 
 const index = () => {
-  const MOCK_DATA_1 = [
-    {
-      id: 1,
-      title: "Bộ xếp hình The Moon - The Earth",
-      price: "250,000₫",
-      priceSale: "250,000₫",
-      images:
-        "https://product.hstatic.net/1000384816/product/24ddeb082e5fd101884e_a6acd4d16a044d95be68f8e8f3d7e2ef_medium.jpg",
-    },
-    {
-      id: 2,
-      title: "Đèn Led",
-      price: "250,000₫",
-      priceSale: "250,000₫",
-      images:
-        "https://product.hstatic.net/1000384816/product/96c4f262c4d942a0bce86786552b820c_89ade52768e5485fa263b1ff37a5a7e8_medium.jpg",
-    },
-    {
-      id: 3,
-      title: "Đèn UFO",
-      price: "250,000₫",
-      priceSale: "250,000₫",
-      images:
-        "https://product.hstatic.net/1000384816/product/125202683_2579484139010312_194843452622553207_n_9238b135767a4d078c0f548a26c0b9d3_medium.jpg",
-    },
-    {
-      id: 4,
-      title: "Đồng Hồ UFO",
-      price: "250,000₫",
-      priceSale: "250,000₫",
-      images:
-        "https://product.hstatic.net/1000384816/product/1_10a694c1f7a648e0931aa450c6dabf28_medium.jpg",
-    },
-    {
-      id: 5,
-      title: "Gạt Tàn Phi Hành Gia",
-      price: "250,000₫",
-      priceSale: "250,000₫",
-      images:
-        "https://product.hstatic.net/1000384816/product/12792750788_10287796_06cdc05731b14fbda59f4ab8b203d0a4_medium.jpg",
-    },
-    {
-      id: 6,
-      title: " Thảm treo tường mặt trăng",
-      price: "250,000₫",
-      priceSale: "250,000₫",
-      images:
-        "https://product.hstatic.net/1000384816/product/71945112_2243904609234935_6454464740621025280_n_cdf8a35d1c084a5caab63543cf2ff92f_medium.jpg",
-    },
-    {
-      id: 7,
-      title: "Thảm teo tường phi hành gia",
-      price: "250,000₫",
-      priceSale: "250,000₫",
-      images:
-        "https://product.hstatic.net/1000384816/product/o1cn01sa13ja25hvuvu3axy___1726107501_b1f9d18a61da42d39d7ac75301ef7a75_medium.jpg",
-    },
-    {
-      id: 8,
-      title: "Thảm teo tường phi hành gia mèo",
-      price: "250,000₫",
-      priceSale: "250,000₫",
-      images:
-        "https://product.hstatic.net/1000384816/product/o1cn011inxp4arsuu55yw___196400881_b466972f0aac46deb268fe9b5c6096a2_medium.jpg",
-    },
-    {
-      id: 9,
-      title: "Bộ xếp hình The Moon - The Earth",
-      price: "250,000₫",
-      priceSale: "250,000₫",
-      images:
-        "https://product.hstatic.net/1000384816/product/24ddeb082e5fd101884e_a6acd4d16a044d95be68f8e8f3d7e2ef_medium.jpg",
-    },
-    {
-      id: 10,
-      title: "Bộ xếp hình The Moon - The Earth",
-      price: "250,000₫",
-      priceSale: "250,000₫",
-      images:
-        "https://product.hstatic.net/1000384816/product/24ddeb082e5fd101884e_a6acd4d16a044d95be68f8e8f3d7e2ef_medium.jpg",
-    },
-  ];
   return (
     <div className="app__container">
       <div className="grid wide">
         <div className="row">
           <nav className="slide-container">
             <div className="image-slideshow">
-              <div>
-                <img
-                  className="slide-img"
-                  src="https://theme.hstatic.net/1000384816/1000493587/14/slider_1.jpg?v=307"
-                  alt=""
-                />
-                <div>
-                  <h2>Kẻ Du Hành</h2>
-                  <p>Người được chọn là bạn...</p>
-                </div>
-              </div>
               <div>
                 <img
                   className="slide-img"
@@ -182,14 +89,17 @@ const index = () => {
           </div>
           <div className="home-product">
             <div className="row sm-gutter">
-              {MOCK_DATA_1.map((data) => (
+              {LIST_1.map((item) => (
                 <div
-                  key={data.id}
+                  key={item.id}
                   className="col l-2-4 m-4 c-6 home-product__border"
                 >
                   <div className="home-product__item">
-                    <Link to="/Product" className="home-product__item-link">
-                      <img style={{ width: "100%" }} src={data.images} alt="" />
+                    <Link
+                      to={`/products/${item.id}`}
+                      className="home-product__item-link"
+                    >
+                      <img style={{ width: "100%" }} src={item.images} alt="" />
                       <div className="home-product__action">
                         <div className="home-product__action-icon">
                           <div className="view">
@@ -200,19 +110,10 @@ const index = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="home-product__action">
-                        <div className="home-product__action-icon">
-                          <div className="view">
-                            <i className="fa fa-search-plus" />
-                          </div>
-                          <div className="add-cart">
-                            <i className="fa fa-cart-plus" />
-                          </div>
-                        </div>
-                      </div>
-                      <h3 className="home-product__title">{data.title}</h3>
+
+                      <h3 className="home-product__title">{item.title}</h3>
                     </Link>
-                    <span className="home-product__price"> {data.price}</span>
+                    <span className="home-product__price"> {item.price}</span>
                   </div>
                 </div>
               ))}
@@ -230,121 +131,30 @@ const index = () => {
                   <span>SPACE</span>
                 </div>
               </div>
-              <div className="col l-2-4 m-4 c-6 home-product__border">
-                <div className="home-product__item">
-                  <a href="/#" className="home-product__item-link">
-                    <img
-                      style={{ width: "100%" }}
-                      src="https://product.hstatic.net/1000384816/product/916087297_625364377_b47c674f43854596886ba1d451e75d4d_medium.jpg"
-                      alt=""
-                    />
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
-                        </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className="home-product__title">Âms chén hoa đào đỏ</h3>
-                  </a>
-                  <span className="home-product__price"> 250,000₫</span>
-                </div>
-              </div>
-              <div className="col l-2-4 m-4 c-6 home-product__border">
-                <div className="home-product__item">
-                  <a href="/#" className="home-product__item-link">
-                    <img
-                      style={{ width: "100%" }}
-                      src="https://product.hstatic.net/1000384816/product/916087297_625364377_b47c674f43854596886ba1d451e75d4d_medium.jpg"
-                      alt=""
-                    />
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
-                        </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
+              {LIST_2.map((item) => (
+                <div
+                  key={item.id}
+                  className="col l-2-4 m-4 c-6 home-product__border"
+                >
+                  <div className="home-product__item">
+                    <a href="/#" className="home-product__item-link">
+                      <img style={{ width: "100%" }} src={item.images} alt="" />
+                      <div className="home-product__action">
+                        <div className="home-product__action-icon">
+                          <div className="view">
+                            <i className="fa fa-search-plus" />
+                          </div>
+                          <div className="add-cart">
+                            <i className="fa fa-cart-plus" />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <h3 className="home-product__title">Âms chén hoa đào đỏ</h3>
-                  </a>
-                  <span className="home-product__price"> 250,000₫</span>
+                      <h3 className="home-product__title">{item.title}</h3>
+                    </a>
+                    <span className="home-product__price">{item.price}</span>
+                  </div>
                 </div>
-              </div>
-              <div className="col l-2-4 m-4 c-6 home-product__border">
-                <div className="home-product__item">
-                  <a href="/#" className="home-product__item-link">
-                    <img
-                      style={{ width: "100%" }}
-                      src="https://product.hstatic.net/1000384816/product/916087297_625364377_b47c674f43854596886ba1d451e75d4d_medium.jpg"
-                      alt=""
-                    />
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
-                        </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className="home-product__title">Âms chén hoa đào đỏ</h3>
-                  </a>
-                  <span className="home-product__price"> 250,000₫</span>
-                </div>
-              </div>
-              <div className="col l-2-4 m-4 c-6 home-product__border">
-                <div className="home-product__item">
-                  <a href="/#" className="home-product__item-link">
-                    <img
-                      style={{ width: "100%" }}
-                      src="https://product.hstatic.net/1000384816/product/916087297_625364377_b47c674f43854596886ba1d451e75d4d_medium.jpg"
-                      alt=""
-                    />
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
-                        </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className="home-product__title">Âms chén hoa đào đỏ</h3>
-                  </a>
-                  <span className="home-product__price"> 250,000₫</span>
-                </div>
-              </div>
-              <div className="col l-2-4 m-4 c-6 home-product__border">
-                <div className="home-product__item">
-                  <a href="/#" className="home-product__item-link">
-                    <img
-                      style={{ width: "100%" }}
-                      src="https://product.hstatic.net/1000384816/product/916087297_625364377_b47c674f43854596886ba1d451e75d4d_medium.jpg"
-                      alt=""
-                    />
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
-                        </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className="home-product__title">Âms chén hoa đào đỏ</h3>
-                  </a>
-                  <span className="home-product__price"> 250,000₫</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           <div className="home__space">
@@ -359,127 +169,206 @@ const index = () => {
                   <span>MISS</span>
                 </div>
               </div>
-              <div className="col l-2-4 m-4 c-6 home-product__border">
-                <div className="home-product__item">
-                  <a href="/#" className="home-product__item-link">
-                    <img
-                      style={{ width: "100%" }}
-                      src="https://product.hstatic.net/1000384816/product/2_3e034afb14d34eeea2219399d5661cff_medium.png"
-                      alt=""
-                    />
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
-                        </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className="home-product__title">Đèn Led</h3>
-                  </a>
-                  <span className="home-product__price"> 250,000₫</span>
-                </div>
-              </div>
-              <div className="col l-2-4 m-4 c-6 home-product__border">
-                <div className="home-product__item">
-                  <a href="/#" className="home-product__item-link">
-                    <img
-                      style={{ width: "100%" }}
-                      src="https://product.hstatic.net/1000384816/product/2_3e034afb14d34eeea2219399d5661cff_medium.png"
-                      alt=""
-                    />
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
-                        </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
+              {LIST_3.map((item) => (
+                <div
+                  key={item.id}
+                  className="col l-2-4 m-4 c-6 home-product__border"
+                >
+                  <div className="home-product__item">
+                    <a href="/#" className="home-product__item-link">
+                      <img style={{ width: "100%" }} src={item.images} alt="" />
+                      <div className="home-product__action">
+                        <div className="home-product__action-icon">
+                          <div className="view">
+                            <i className="fa fa-search-plus" />
+                          </div>
+                          <div className="add-cart">
+                            <i className="fa fa-cart-plus" />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <h3 className="home-product__title">Đèn Led</h3>
-                  </a>
-                  <span className="home-product__price"> 250,000₫</span>
+                      <h3 className="home-product__title">{item.title}</h3>
+                    </a>
+                    <span className="home-product__price">{item.price}</span>
+                  </div>
                 </div>
-              </div>
-              <div className="col l-2-4 m-4 c-6 home-product__border">
-                <div className="home-product__item">
-                  <a href="/#" className="home-product__item-link">
-                    <img
-                      style={{ width: "100%" }}
-                      src="https://product.hstatic.net/1000384816/product/2_3e034afb14d34eeea2219399d5661cff_medium.png"
-                      alt=""
-                    />
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
-                        </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className="home-product__title">Đèn Led</h3>
-                  </a>
-                  <span className="home-product__price"> 250,000₫</span>
-                </div>
-              </div>
-              <div className="col l-2-4 m-4 c-6 home-product__border">
-                <div className="home-product__item">
-                  <a href="/#" className="home-product__item-link">
-                    <img
-                      style={{ width: "100%" }}
-                      src="https://product.hstatic.net/1000384816/product/2_3e034afb14d34eeea2219399d5661cff_medium.png"
-                      alt=""
-                    />
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
-                        </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className="home-product__title">Đèn Led</h3>
-                  </a>
-                  <span className="home-product__price"> 250,000₫</span>
-                </div>
-              </div>
-              <div className="col l-2-4 m-4 c-6 home-product__border">
-                <div className="home-product__item">
-                  <a href="/#" className="home-product__item-link">
-                    <img
-                      style={{ width: "100%" }}
-                      src="https://product.hstatic.net/1000384816/product/2_3e034afb14d34eeea2219399d5661cff_medium.png"
-                      alt=""
-                    />
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
-                        </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className="home-product__title">Đèn Led</h3>
-                  </a>
-                  <span className="home-product__price"> 250,000₫</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
+      <img
+        className="img-ft"
+        alt=""
+        src="https://thiepmung.com/images/theme/hello-july105b36fd3b77315.jpg"
+      ></img>
     </div>
   );
 };
-
+const LIST_1 = [
+  {
+    id: "1",
+    title: "Bộ xếp hình  ",
+    price: "250,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/24ddeb082e5fd101884e_a6acd4d16a044d95be68f8e8f3d7e2ef_medium.jpg",
+  },
+  {
+    id: "2",
+    title: "Đèn Led",
+    price: "350,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/96c4f262c4d942a0bce86786552b820c_89ade52768e5485fa263b1ff37a5a7e8_medium.jpg",
+  },
+  {
+    id: "3",
+    title: "Đèn UFO",
+    price: "210,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/125202683_2579484139010312_194843452622553207_n_9238b135767a4d078c0f548a26c0b9d3_medium.jpg",
+  },
+  {
+    id: "4",
+    title: "Đồng Hồ UFO",
+    price: "550,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/1_10a694c1f7a648e0931aa450c6dabf28_medium.jpg",
+  },
+  {
+    id: "5",
+    title: "Gạt Tàn Phi Hành Gia",
+    price: "150,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/12792750788_10287796_06cdc05731b14fbda59f4ab8b203d0a4_medium.jpg",
+  },
+  {
+    id: "6",
+    title: " Thảm treo tường mặt trăng",
+    price: "200,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/71945112_2243904609234935_6454464740621025280_n_cdf8a35d1c084a5caab63543cf2ff92f_medium.jpg",
+  },
+  {
+    id: "7",
+    title: "Thảm phi hành gia mèo",
+    price: "300,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/o1cn01sa13ja25hvuvu3axy___1726107501_b1f9d18a61da42d39d7ac75301ef7a75_medium.jpg",
+  },
+  {
+    id: "8",
+    title: "Thảm teo tường mặt trăng",
+    price: "200,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/o1cn011inxp4arsuu55yw___196400881_b466972f0aac46deb268fe9b5c6096a2_medium.jpg",
+  },
+  {
+    id: "9",
+    title: "Bộ xếp hình The Moon ",
+    price: "600,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/67544418_2196811897277540_9191531180841762816_n_b88ed090d8a74e5499b65ce2b3d1f11e_medium.jpg",
+  },
+  {
+    id: "10",
+    title: "Bộ xếp hình The Earth",
+    price: "150,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/o1cn01qtfwaj2hkc3ikq4e4___807169189_714441d0aa1748c49046ecdcc3fd769d_medium.jpg",
+  },
+];
+const LIST_2 = [
+  {
+    id: "1",
+    title: "Case AirPods Black Robot",
+    price: "150,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/o1cn010ixnob1fuzf932ec0___2259520547-0-lubanu-s_bcec713653ad404e9aaee307aa7297ad_medium.jpg",
+  },
+  {
+    id: "2",
+    title: "Case AirPods Chó Pug",
+    price: "520,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/o1cn01p6l0z429jzkirp2aj___3895628047_928cf8c7174848b3aad1921fbe3d2168_medium.jpg",
+  },
+  {
+    id: "3",
+    title: "Case AirPods Games box",
+    price: "200,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/o1cn01jdprrk2fhhxfphzxr___42658911_a92d6fbe2c9f49219d4fb018be8a2615_medium.jpg",
+  },
+  {
+    id: "4",
+    title: "Case AirPods Nasa",
+    price: "150,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/12571936399_520447672_62cf4c4f8aa9423fb1536514ba191de5_medium.jpg",
+  },
+  {
+    id: "5",
+    title: "Case AirPods Robot White",
+    price: "250,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/o1cn01cj6ovu1fuzfgyfwvc___2259520547_96ea6a79f9364a25abf31a3206b70847_medium.jpg",
+  },
+];
+const LIST_3 = [
+  {
+    id: "1",
+    title: "Đèn But Lamp",
+    price: "150,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/761e90001d97e7c9be86_e7d203c483f04c6993936612b55e986e_medium.jpg",
+  },
+  {
+    id: "2",
+    title: "Đèn chòm sao",
+    price: "520,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/untitled-3_0092c69cb4424f86b9db7ac943d5ebf1_medium.jpg",
+  },
+  {
+    id: "3",
+    title: "Đèn Little Pet House",
+    price: "200,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/13509887867_1743032699_129a41b3c9754e68b5c9edca515469b6_medium.jpg",
+  },
+  {
+    id: "4",
+    title: "Đèn trực thăng",
+    price: "150,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/90144941_2380627578895970_3431204400171843584_o_b4bfc6e392ea4c80a85025424c272490_medium.jpg",
+  },
+  {
+    id: "5",
+    title: "Robot White",
+    price: "250,000₫",
+    priceSale: "250,000₫",
+    images:
+      "https://product.hstatic.net/1000384816/product/9296805564_1743032699_6417ad3575a34b4681e88dcf2ccf8c6e_medium.jpg",
+  },
+];
 export default index;

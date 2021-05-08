@@ -18,7 +18,7 @@ class RouterUrl extends Component {
         <Route exact path="/" component={Main} />
         <Route exact path="/AllItem" component={AllItem} />
         <Route exact path="/newYear" component={NewYear} />
-        <Route exact path="/Product" component={Product} />
+        <Route exact path="/products/:id" component={Product} />
         <Route exact path="/Manages" component={Manages} />
       </Switch>
     );

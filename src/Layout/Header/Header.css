@@ -177,7 +177,9 @@
     margin-left: 0;  
     text-decoration: none;
 }
-
+.header-menu__subnav-item-link:hover{
+    background-color: #ccc;
+}
 .fas-right{
    color: var(--text-color);
    display: inline-block;
@@ -243,6 +245,9 @@
 .all__item-list-item{
     padding: 0 20px;
 
+}
+.all__item-list-item:hover{
+    background-color: #ccc;
 }
 .all__item-list-item a{
     font-weight: bold;
