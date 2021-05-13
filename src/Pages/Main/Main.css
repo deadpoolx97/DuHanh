@@ -5,8 +5,9 @@
   display: flex;
 }
 .app__container{
-  padding-top: calc(var(--header-height) + 20px);    
-  margin-bottom: -4px;
+  padding-top: calc(var(--header-height) + 10px);    
+  margin-bottom: 40px;
+  
 }
 .app__container-navbar-img{
   max-width: 1200px;
@@ -69,9 +70,9 @@
     width: 100%;
 }
 .home-collection--main{
-    font-size: 2rem;
+    font-size:20px ;
     font-weight: 100;
-    line-height: 1.2rem;
+    line-height: 12px;
     height: 40px;
     width: 180px;
     background-color: var(--primary-color);
@@ -122,7 +123,7 @@
     height: 40px;
     width: 80%;
     background-color: white;
-    font-size: 1.8rem;
+    font-size: 18px;
     color: var(--text-color);
     position: absolute;
     display: none;
@@ -150,7 +151,7 @@
     font-weight: 300;
 }
 .home-product__price{
-    font-size: 1.4rem;
+    font-size: 14px;
     color: var(--primary-color);
 }
 .img-link{

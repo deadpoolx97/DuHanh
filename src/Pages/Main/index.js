@@ -96,23 +96,23 @@ const index = () => {
                 >
                   <div className="home-product__item">
                     <Link
-                      to={`/products/${item.id}`}
+                      to={`/productM/${item.id}`}
                       className="home-product__item-link"
                     >
                       <img style={{ width: "100%" }} src={item.images} alt="" />
-                      <div className="home-product__action">
-                        <div className="home-product__action-icon">
-                          <div className="view">
-                            <i className="fa fa-search-plus" />
-                          </div>
-                          <div className="add-cart">
-                            <i className="fa fa-cart-plus" />
-                          </div>
-                        </div>
-                      </div>
 
                       <h3 className="home-product__title">{item.title}</h3>
                     </Link>
+                    <div className="home-product__action">
+                      <div className="home-product__action-icon">
+                        <div className="view">
+                          <i className="fa fa-search-plus" />
+                        </div>
+                        <div className="add-cart">
+                          <i className="fa fa-cart-plus" />
+                        </div>
+                      </div>
+                    </div>
                     <span className="home-product__price"> {item.price}</span>
                   </div>
                 </div>
@@ -139,18 +139,18 @@ const index = () => {
                   <div className="home-product__item">
                     <a href="/#" className="home-product__item-link">
                       <img style={{ width: "100%" }} src={item.images} alt="" />
-                      <div className="home-product__action">
-                        <div className="home-product__action-icon">
-                          <div className="view">
-                            <i className="fa fa-search-plus" />
-                          </div>
-                          <div className="add-cart">
-                            <i className="fa fa-cart-plus" />
-                          </div>
-                        </div>
-                      </div>
                       <h3 className="home-product__title">{item.title}</h3>
                     </a>
+                    <div className="home-product__action">
+                      <div className="home-product__action-icon">
+                        <div className="view">
+                          <i className="fa fa-search-plus" />
+                        </div>
+                        <div className="add-cart">
+                          <i className="fa fa-cart-plus" />
+                        </div>
+                      </div>
+                    </div>
                     <span className="home-product__price">{item.price}</span>
                   </div>
                 </div>
@@ -197,11 +197,6 @@ const index = () => {
           </div>
         </div>
       </div>
-      <img
-        className="img-ft"
-        alt=""
-        src="https://thiepmung.com/images/theme/hello-july105b36fd3b77315.jpg"
-      ></img>
     </div>
   );
 };

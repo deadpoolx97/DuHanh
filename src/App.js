@@ -6,16 +6,20 @@ import Footer from "./Layout/Footer";
 import Header from "./Layout/Header";
 import { BrowserRouter as Router } from "react-router-dom";
 import RouterUrl from "./Router";
+import store from "./App/store";
+import { Provider } from "react-redux";
 
 const App = () => {
   return (
-    <Router>
-      <div className="app">
-        <Header />
-        <RouterUrl />
-        <Footer />
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <div className="app">
+          <Header />
+          <RouterUrl />
+          <Footer />
+        </div>
+      </Router>
+    </Provider>
   );
 };
 

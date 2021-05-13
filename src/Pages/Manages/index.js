@@ -216,13 +216,12 @@ class Manages extends Component {
 
     return (
       <div className="app__container ">
-        <div className="grid wide mb-20 mt-5">
+        <div className="grid wide mb-20 mt-15" style={{ marginTop: "20px" }}>
           <div className="text-center">
             <h1>Thêm Sản phẩm</h1>
-            <hr />
           </div>
-          <div className=" .mt-15">
-            <div className=".mt-15">{elmTaskForm}</div>
+          <div className=" mt-15">
+            <div className="mt-15">{elmTaskForm}</div>
             <div className={isDisplayForm === true ? "l-12" : "l-12"}>
               <button
                 type="button"

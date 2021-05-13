@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import AddProd from "./components/AddProd";
+import { addToCart } from "../../Layout/Cart/cartSlice";
+import itemData from "../itemData";
 import {} from "../Product/Product.css";
+import AddToCartForm from "./components/AddToCartForm";
 
-const Products = () => {
+const Products = ({ onSubmit = null }) => {
+  const dispatch = useDispatch();
   const { id } = useParams();
-  const data = LIST_1.find((item) => item.id === id);
-
-  const [amount, setAmount] = useState(1);
-  const onChangeAmount = (value) => {
-    if (amount + value >= 1 && amount + value <= 100) {
-      setAmount(amount + value);
-    }
+  const mockData = itemData;
+  const data =
+    LIST_1.find((item) => item.id === id) ||
+    mockData.find((item) => item.id === id);
+  const handleAddToCartSubmit = ({ quantity }) => {
+    const action = addToCart({
+      quantity,
+    });
+    dispatch(action);
   };
   return (
     <div className="app__container">
@@ -20,10 +26,10 @@ const Products = () => {
           <div className="product">
             <div className="col l-6 m-6 c-12">
               <div className="product-name">
-                <Link to="./" className="product-name__go-home">
+                <Link to="" className="product-name__go-home">
                   Trang chủ /
                 </Link>
-                <span>{data.title}</span>
+                <span> {data?.title}</span>
               </div>
               <div className="slider ">
                 <input type="radio" name="slide_switch" id="id1" />
@@ -47,12 +53,18 @@ const Products = () => {
                   defaultChecked="checked"
                 />
                 <label htmlFor="id2">
-                  <img alt="a" src={data.images} width={120} />
+                  <img
+                    className="slide-img__small"
+                    alt="a"
+                    src={data?.images}
+                    width={120}
+                  />
                 </label>
-                <img alt="a" className="slide-img__big" src={data.images} />
+                <img alt="a" className="slide-img__big" src={data?.images} />
                 <input type="radio" name="slide_switch" id="id3" />
                 <label htmlFor="id3">
                   <img
+                    className="slide-img__small"
                     alt="a"
                     src="https://product.hstatic.net/1000384816/product/o1cn01eafdqf1e7jpnadvpb___1702020305_3b91a683aa8e41b0a59f112b07f3e08d.jpg"
                     width={120}
@@ -66,6 +78,7 @@ const Products = () => {
                 <input type="radio" name="slide_switch" id="id4" />
                 <label htmlFor="id4">
                   <img
+                    className="slide-img__small"
                     alt="a"
                     src="https://product.hstatic.net/1000384816/product/00785ee4b4b54beb12a4_ab15363d3ff54a69890fdad126167f12.jpg"
                     width={120}
@@ -99,18 +112,7 @@ const Products = () => {
               </span>
               <div className="product-price">{data.price} Còn hàng</div>
               <div className="product-amount">
-                <h3 className="product-amount__title">Số lượng : </h3>
-                <AddProd
-                  amount={amount}
-                  onChangeAmount={onChangeAmount}
-                  //   onNotifi={this.onNotifi}
-                />
-              </div>
-              <div
-                className="btn product-buy"
-                //   onClick={this.onNotifi}
-              >
-                MUA HÀNG
+                <AddToCartForm onSubmit={handleAddToCartSubmit} />
               </div>
             </div>
           </div>

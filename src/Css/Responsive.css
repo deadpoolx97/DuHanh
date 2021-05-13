@@ -21,7 +21,7 @@
 
 }
   .header__mobile-search-icon{
-      font-size: 2rem;
+      font-size: 20px;
       background-color: var(--primary-color);
       display: flex;
       align-items: center;
