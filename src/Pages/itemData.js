@@ -1,3 +1,6 @@
+export const NUMBER_ITEM_PAGINATION = 2;
+
+export const OFFSET_PAGINATION = 1;
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {

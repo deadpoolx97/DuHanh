@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import AllItem from "../Pages/All-item";
 import Main from "../Pages/Main";
 import Manages from "../Pages/Manages";
-import NewYear from "../Pages/NewYear";
+import NewYear from "../Pages/NewYear/NewYear";
 import ProductFeature from "../Pages/Products";
 import Product from "../Pages/Product";
 import CartFeature from "../Layout/Cart";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../All-item/AllItem.css";
-import SortItem from "./SortItem";
-import SearchColor from "./SearchColor";
+import SearchColor from "./components/SearchColor";
+import SortItem from "./components/SortItem";
 import { Link } from "react-router-dom";
 import itemData from "../itemData";
 const AllItem = () => {

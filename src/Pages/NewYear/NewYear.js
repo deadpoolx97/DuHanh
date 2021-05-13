@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import classNames from "classnames";
-import {} from "./NewYear.css";
+import "../NewYear/NewYear.css";
 
 const RED = 0;
 const ORANGE = 1;

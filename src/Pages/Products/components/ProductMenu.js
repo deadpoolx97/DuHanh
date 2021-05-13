@@ -46,11 +46,11 @@ const useStyles = makeStyles((theme) => ({
 
     "& > li > a": {
       color: theme.palette.grey[700],
+      border: "none",
     },
 
     "& > li > a.active": {
-      color: theme.palette.primary.main,
-      textDecoration: "underline",
+      color: "var(--primary-color)",
     },
   },
 }));
