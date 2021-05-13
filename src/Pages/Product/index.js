@@ -110,7 +110,7 @@ const Products = ({ onSubmit = null }) => {
                   xất xứ rõ ràng{" "}
                 </p>
               </span>
-              <div className="product-price">{data.price} Còn hàng</div>
+              <div className="product-price">{data.salePrice} Còn hàng</div>
               <div className="product-amount">
                 <AddToCartForm onSubmit={handleAddToCartSubmit} />
               </div>
@@ -161,7 +161,7 @@ const LIST_1 = [
   {
     id: "1",
     title: "Bộ xếp hình  ",
-    price: "250,000₫",
+    salePrice: "250,000₫",
     priceSale: "250,000₫",
     images:
       "https://product.hstatic.net/1000384816/product/24ddeb082e5fd101884e_a6acd4d16a044d95be68f8e8f3d7e2ef_medium.jpg",
@@ -169,7 +169,7 @@ const LIST_1 = [
   {
     id: "2",
     title: "Đèn Led",
-    price: "350,000₫",
+    salePrice: "350,000₫",
     priceSale: "250,000₫",
     images:
       "https://product.hstatic.net/1000384816/product/96c4f262c4d942a0bce86786552b820c_89ade52768e5485fa263b1ff37a5a7e8_medium.jpg",
@@ -177,7 +177,7 @@ const LIST_1 = [
   {
     id: "3",
     title: "Đèn UFO",
-    price: "210,000₫",
+    salePrice: "210,000₫",
     priceSale: "250,000₫",
     images:
       "https://product.hstatic.net/1000384816/product/125202683_2579484139010312_194843452622553207_n_9238b135767a4d078c0f548a26c0b9d3_medium.jpg",
@@ -185,7 +185,7 @@ const LIST_1 = [
   {
     id: "4",
     title: "Đồng Hồ UFO",
-    price: "550,000₫",
+    salePrice: "550,000₫",
     priceSale: "250,000₫",
     images:
       "https://product.hstatic.net/1000384816/product/1_10a694c1f7a648e0931aa450c6dabf28_medium.jpg",
@@ -193,7 +193,7 @@ const LIST_1 = [
   {
     id: "5",
     title: "Gạt Tàn Phi Hành Gia",
-    price: "150,000₫",
+    salePrice: "150,000₫",
     priceSale: "250,000₫",
     images:
       "https://product.hstatic.net/1000384816/product/12792750788_10287796_06cdc05731b14fbda59f4ab8b203d0a4_medium.jpg",
@@ -201,7 +201,7 @@ const LIST_1 = [
   {
     id: "6",
     title: " Thảm treo tường mặt trăng",
-    price: "200,000₫",
+    salePrice: "200,000₫",
     priceSale: "250,000₫",
     images:
       "https://product.hstatic.net/1000384816/product/71945112_2243904609234935_6454464740621025280_n_cdf8a35d1c084a5caab63543cf2ff92f_medium.jpg",
@@ -209,7 +209,7 @@ const LIST_1 = [
   {
     id: "7",
     title: "Thảm phi hành gia mèo",
-    price: "300,000₫",
+    salePrice: "300,000₫",
     priceSale: "250,000₫",
     images:
       "https://product.hstatic.net/1000384816/product/o1cn01sa13ja25hvuvu3axy___1726107501_b1f9d18a61da42d39d7ac75301ef7a75_medium.jpg",
@@ -217,7 +217,7 @@ const LIST_1 = [
   {
     id: "8",
     title: "Thảm teo tường mặt trăng",
-    price: "200,000₫",
+    salePrice: "200,000₫",
     priceSale: "250,000₫",
     images:
       "https://product.hstatic.net/1000384816/product/o1cn011inxp4arsuu55yw___196400881_b466972f0aac46deb268fe9b5c6096a2_medium.jpg",
@@ -225,7 +225,7 @@ const LIST_1 = [
   {
     id: "9",
     title: "Bộ xếp hình The Moon ",
-    price: "600,000₫",
+    salePrice: "600,000₫",
     priceSale: "250,000₫",
     images:
       "https://product.hstatic.net/1000384816/product/67544418_2196811897277540_9191531180841762816_n_b88ed090d8a74e5499b65ce2b3d1f11e_medium.jpg",
@@ -233,7 +233,7 @@ const LIST_1 = [
   {
     id: "10",
     title: "Bộ xếp hình The Earth",
-    price: "150,000₫",
+    salePrice: "150,000₫",
     priceSale: "250,000₫",
     images:
       "https://product.hstatic.net/1000384816/product/o1cn01qtfwaj2hkc3ikq4e4___807169189_714441d0aa1748c49046ecdcc3fd769d_medium.jpg",

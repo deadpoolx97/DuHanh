@@ -1,7 +1,7 @@
-const { createSlice } = require('@reduxjs/toolkit');
+const { createSlice } = require("@reduxjs/toolkit");
 
 const counterSlice = createSlice({
-  name: 'counter',
+  name: "counter",
   initialState: 0,
   reducers: {
     increase(state) {
@@ -15,5 +15,5 @@ const counterSlice = createSlice({
 });
 
 const { actions, reducer } = counterSlice;
-export const { increase, decrease } = actions; // named export
-export default reducer; // default export
+export const { increase, decrease } = actions;
+export default reducer;

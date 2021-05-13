@@ -11,13 +11,7 @@ const QuantityField = (props) => {
   const { setValue } = form;
 
   return (
-    <FormControl
-      // error={hasError}
-      fullWidth
-      margin="normal"
-      variant="outlined"
-      size="small"
-    >
+    <FormControl fullWidth margin="normal" variant="outlined" size="small">
       <Typography>{label}</Typography>
 
       <Controller
@@ -34,12 +28,11 @@ const QuantityField = (props) => {
               }}
               onClick={() => setValue(name, Number.parseInt(value) - 1)}
             >
-              <i className="fa fa-minus" />
+              <i style={{ color: "#fff" }} className="fa fa-minus" />
             </IconButton>
 
             <OutlinedInput
               id={name}
-              type="number"
               disabled={disabled}
               value={value}
               onChange={onChange}
@@ -57,7 +50,7 @@ const QuantityField = (props) => {
                 setValue(name, Number.parseInt(Number.parseInt(value) + 1))
               }
             >
-              <i className="fa fa-plus" />
+              <i style={{ color: "#fff" }} className="fa fa-plus" />
             </IconButton>
           </Box>
         )}

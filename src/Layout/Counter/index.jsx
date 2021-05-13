@@ -25,12 +25,11 @@ function CounterFeature(props) {
   const count = useSelector((state) => state.count);
 
   const handleIncreaseClick = () => {
-    const action = increase(); // action creator
+    const action = increase();
     dispatch(action);
   };
 
   const handleDecreaseClick = () => {
-    // const action = decrease(); // action creator
     dispatch(decrease());
   };
 

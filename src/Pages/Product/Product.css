@@ -140,9 +140,8 @@
 .product-amount__btn-minus{
     padding: 10px 20px;
     cursor: pointer;
-    /* border-right: 1px solid #ebebeb; */
-    height: 100%;
-}
+     height: 100%;
+ }
 .product-amount__btn-number{
     border: none;
     padding: 0 20px;
@@ -151,8 +150,7 @@
 }
 .product-amount__btn-bonus{
     cursor: pointer;
-    /* border-left: 1px solid #ebebeb; */
-    padding: 10px 20px;
+     padding: 10px 20px;
 
 } 
 .product-buy{

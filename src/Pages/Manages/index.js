@@ -122,9 +122,7 @@ class Manages extends Component {
   onUpdate = (id) => {
     let { tasks } = this.state;
     let index = this.findIndex(id);
-    // let index = _.findIndex(tasks, (task) => {
-    //     return task.id === id;
-    // })
+
     let taskEditing = tasks[index];
     this.setState({
       taskEditing: taskEditing,
