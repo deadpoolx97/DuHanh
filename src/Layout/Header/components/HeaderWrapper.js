@@ -17,7 +17,7 @@ const HeaderWrapper = () => {
     <div className="header-m">
       <div className="grid wide ">
         <div className="header-main">
-          <Link to="/products" className="header-logo__link">
+          <Link to="/" className="header-logo__link">
             <img
               onClick={handleHomeClick}
               src="./images/logo-icon.png"
