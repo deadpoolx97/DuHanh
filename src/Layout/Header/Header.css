@@ -114,9 +114,7 @@
     padding: 0 20px;
     text-align: center;    
     text-decoration: none;
-
-
-   
+    height: 50px;   
 }
 .header-menu__list-item-menu-all{
     position: relative;
@@ -268,5 +266,7 @@
 .a{
     display: flex;
 }
-
+.header-menu__wrap{
+    height: 100%;
+}
 

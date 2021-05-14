@@ -154,7 +154,7 @@ const MenuWrapper = () => {
               className="col l-3 header-menu__list-item-menu hide"
             >
               <div className="header-menu__list-item-link">
-                Của hàng - liên hệ
+                Cửa hàng - liên hệ
               </div>
             </Link>
           </div>

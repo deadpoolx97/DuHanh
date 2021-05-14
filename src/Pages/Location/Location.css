@@ -2,17 +2,54 @@
     width: 100%;
     padding-top: calc(var(--header-height) + 10px);
 }
-
+.absolute{
+  position: absolute;
+}
 .background-img__map{
-  width: 100%;
-  position: absolute;
-  left: 50%;}
-.travel-img{
-  width: 100%;
-  position: absolute;
+  position: relative;
 }
 .travel{
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
   position: absolute;
-width: 100%;
-background-image: url();
+  top: calc(var(--header-height) + 20px);
+  color: white;
+  overflow: hidden;
+  height: 100vh;
+
 }
+.travel-banner{
+   height: 50%;
+  width: 80%;
+  margin-left: 20%;
+}
+ 
+.travel-banners{
+  height: 200px;
+  width: 80%;
+}
+.travel-h1{
+     line-height: 6rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;   
+    font-family: 'Times New Roman', Times, serif;
+
+ }
+ .travel-img{
+   border-bottom-left-radius: 16px;
+   border-bottom-right-radius: 16px;
+   width: 100%;
+ }
+ .travel-h1s{
+   line-height: 3rem;
+   font-size: 3rem;
+   padding : 20px 40px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 200; 
+ }
+ .travel-sale__img{
+   width: 100%;
+ }

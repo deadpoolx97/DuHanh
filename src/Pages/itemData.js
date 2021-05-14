@@ -14,6 +14,7 @@ export const MOCK_ITEMS = [
     title: "Bình nước giữ nhiệt",
     images:
       "https://product.hstatic.net/1000384816/product/3_22431094666_68195593_57a2c6453fcb4620b0cfd0da24c6710e_medium.jpg",
+    price: "50.000",
     priceSale: "150.000",
     alt: "hi",
   },

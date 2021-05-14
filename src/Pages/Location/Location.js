@@ -12,20 +12,9 @@ const Location = () => {
         <img
           alt="oks"
           src="https://wallpapercave.com/wp/wp2469829.jpg"
-          style={{ position: "relative", width: "100%", zIndex: "-1" }}
-        ></img>
-
-        <div className="grid wide">
-          <div
-            style={{
-              position: "absolute",
-              top: "calc(var(--header-height) + 10px)",
-              color: "white",
-            }}
-          >
-            <Travel />
-          </div>
-        </div>
+          style={{ width: "100%", zIndex: "-1" }}
+        />
+        <Travel />
       </div>
     </div>
   );
