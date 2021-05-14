@@ -139,25 +139,34 @@ const index = () => {
                   key={item.id}
                   className="col l-2-4 m-4 c-6 home-product__border"
                 >
-                  <div className="home-product__item">
-                    <a href="/#" className="home-product__item-link">
-                      <img style={{ width: "100%" }} src={item.images} alt="" />
-                      <h3 className="home-product__title">{item.title}</h3>
-                    </a>
-                    <div className="home-product__action">
-                      <div className="home-product__action-icon">
-                        <div className="view">
-                          <i className="fa fa-search-plus" />
+                  <Link
+                    to={`/productM/${item.id}`}
+                    className="home-product__item-link"
+                  >
+                    <div className="home-product__item">
+                      <div href="/#" className="home-product__item-link">
+                        <img
+                          style={{ width: "100%" }}
+                          src={item.images}
+                          alt=""
+                        />
+                        <div className="home-product__action">
+                          <div className="home-product__action-icon">
+                            <div className="view">
+                              <i className="fa fa-search-plus" />
+                            </div>
+                            <div className="add-cart">
+                              <i className="fa fa-cart-plus" />
+                            </div>
+                          </div>
                         </div>
-                        <div className="add-cart">
-                          <i className="fa fa-cart-plus" />
-                        </div>
+                        <h3 className="home-product__title">{item.title}</h3>
                       </div>
+                      <span className="home-product__price">
+                        {item.salePrice}
+                      </span>
                     </div>
-                    <span className="home-product__price">
-                      {item.salePrice}
-                    </span>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -179,25 +188,34 @@ const index = () => {
                   key={item.id}
                   className="col l-2-4 m-4 c-6 home-product__border"
                 >
-                  <div className="home-product__item">
-                    <a href="/#" className="home-product__item-link">
-                      <img style={{ width: "100%" }} src={item.images} alt="" />
-                      <div className="home-product__action">
-                        <div className="home-product__action-icon">
-                          <div className="view">
-                            <i className="fa fa-search-plus" />
-                          </div>
-                          <div className="add-cart">
-                            <i className="fa fa-cart-plus" />
+                  <Link
+                    to={`/productM/${item.id}`}
+                    className="home-product__item-link"
+                  >
+                    <div className="home-product__item">
+                      <div href="/#" className="home-product__item-link">
+                        <img
+                          style={{ width: "100%" }}
+                          src={item.images}
+                          alt=""
+                        />
+                        <div className="home-product__action">
+                          <div className="home-product__action-icon">
+                            <div className="view">
+                              <i className="fa fa-search-plus" />
+                            </div>
+                            <div className="add-cart">
+                              <i className="fa fa-cart-plus" />
+                            </div>
                           </div>
                         </div>
+                        <h3 className="home-product__title">{item.title}</h3>
                       </div>
-                      <h3 className="home-product__title">{item.title}</h3>
-                    </a>
-                    <span className="home-product__price">
-                      {item.salePrice}
-                    </span>
-                  </div>
+                      <span className="home-product__price">
+                        {item.salePrice}
+                      </span>
+                    </div>
+                  </Link>
                 </div>
               ))}
             </div>

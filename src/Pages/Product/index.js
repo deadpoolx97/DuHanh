@@ -2,17 +2,16 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { addToCart } from "../../Layout/Cart/cartSlice";
-import itemData from "../itemData";
+import { MOCK_ITEMS } from "../itemData";
 import {} from "../Product/Product.css";
 import AddToCartForm from "./components/AddToCartForm";
 
 const Products = ({ onSubmit = null }) => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const mockData = itemData;
   const data =
     LIST_1.find((item) => item.id === id) ||
-    mockData.find((item) => item.id === id);
+    MOCK_ITEMS.find((item) => item.id === id);
   const handleAddToCartSubmit = ({ quantity }) => {
     const action = addToCart({
       quantity,

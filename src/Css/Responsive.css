@@ -28,7 +28,10 @@
       justify-content: center;
   }
   .header-cart__btn{
-    background-color: transparent;
+    background-color: var(--primary-color);
+}
+.header-cart__name{
+    display: none;
 }
   .header-search,
     .header-shop,

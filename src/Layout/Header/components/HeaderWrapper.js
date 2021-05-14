@@ -1,7 +1,7 @@
-import { Link } from "@material-ui/core";
 import React from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import { cartItemsCountSelector } from "../../Cart/selectors";
 
 const HeaderWrapper = () => {
@@ -46,12 +46,14 @@ const HeaderWrapper = () => {
             </div>
           </div>
           <div className="header-shop ">
-            <img
-              src="./images/shop-icon.png"
-              alt=""
-              className="header-shop__img"
-            />
-            <span className="header-shop_name">Cửa hàng</span>
+            <Link to="/map">
+              <img
+                src="./images/shop-icon.png"
+                alt=""
+                className="header-shop__img"
+              />
+              <span className="header-shop_name">Cửa hàng</span>
+            </Link>
           </div>
           <div className="header-cart" onClick={handleCartClick}>
             <button className="btn header-cart__btn">
@@ -60,10 +62,8 @@ const HeaderWrapper = () => {
                 src="./images/cart-icon.png"
                 alt=""
               />
-
-              <span className="header-cart__name">
-                Giỏ hàng : {cartItemsCount}
-              </span>
+              <span className="header-cart__name">Giỏ hàng :</span>
+              <span style={{ paddingRight: "16px" }}>{cartItemsCount}</span>
             </button>
           </div>
         </div>

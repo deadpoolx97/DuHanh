@@ -1,18 +1,30 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import "../All-item/AllItem.css";
 import SearchColor from "./components/SearchColor";
 import SortItem from "./components/SortItem";
 import { Link } from "react-router-dom";
-import itemData from "../itemData";
+import { MOCK_ITEMS } from "../itemData";
+import PaginationCommon from "./components/Pagination";
+
 const AllItem = () => {
   const [color, SetColor] = useState("eb0707");
+  const [currentPage, setCurrentPage] = useState(1);
 
+  let NUM_OF_RECORDS = MOCK_ITEMS.length;
+  let LIMIT = 16;
+  const onPageChanged = useCallback((event, page) => {
+    event.preventDefault();
+    setCurrentPage(page);
+  }, []);
+  const currentComments = MOCK_ITEMS.slice(
+    (currentPage - 1) * LIMIT,
+    (currentPage - 1) * LIMIT + LIMIT
+  );
   const onSetColor = (color) => {
     SetColor(color);
-    console.log(color);
   };
-  const products = itemData;
-  let elmProduct = products.map((product) => {
+  console.log(color);
+  let elmProduct = currentComments.map((product) => {
     return (
       <div className="col l-3-4  m-3 c-6 all-menu__item" key={product.id}>
         <div className="all-menu__item-m">
@@ -33,7 +45,6 @@ const AllItem = () => {
 
             <h3 className="all-menu__item-link-title">{product.title}</h3>
           </Link>
-
           <span className="all-menu__item-prices">
             <div className="all-menu__item-price-sale">{product.price}₫</div>
             <div className="all-menu__item-price">{product.priceSale}₫</div>
@@ -109,13 +120,21 @@ const AllItem = () => {
               </div>
             </div>
             <div className="col l-9">
-              <SortItem />
+              <SortItem color={color} />
               <div className="all-menu_list">
                 <div className="all-menu__list-item">
                   <div className="row">{elmProduct}</div>
                 </div>
               </div>
-              <div className="pagination-list"></div>
+              <div className="pagination-list">
+                <PaginationCommon
+                  totalRecords={NUM_OF_RECORDS}
+                  pageLimit={LIMIT}
+                  pageNeighbours={1}
+                  onPageChanged={onPageChanged}
+                  currentPage={currentPage}
+                />
+              </div>
             </div>
           </div>
         </div>

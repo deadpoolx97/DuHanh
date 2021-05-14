@@ -149,7 +149,10 @@ const MenuWrapper = () => {
                 Tết
               </div>
             </Link>
-            <Link to="" className="col l-3 header-menu__list-item-menu hide">
+            <Link
+              to="/map"
+              className="col l-3 header-menu__list-item-menu hide"
+            >
               <div className="header-menu__list-item-link">
                 Của hàng - liên hệ
               </div>

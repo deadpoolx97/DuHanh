@@ -7,6 +7,7 @@ import NewYear from "../Pages/NewYear/NewYear";
 import ProductFeature from "../Pages/Products";
 import Product from "../Pages/Product";
 import CartFeature from "../Layout/Cart";
+import Location from "../Pages/Location/Location";
 
 const RouterUrl = () => {
   return (
@@ -18,6 +19,7 @@ const RouterUrl = () => {
       <Route exact path="/Manages" component={Manages} />
       <Route path="/products" component={ProductFeature} />
       <Route path="/cart" component={CartFeature} />
+      <Route path="/map" component={Location} />
       <Redirect from="/post-list/:postId" to="/posts/:postId" exact />
     </Switch>
   );
