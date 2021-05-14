@@ -34,8 +34,8 @@
     display: none;
 }
   .header-search,
-    .header-shop,
-    .header-list{
+    .header-shop
+  {
         display: none !important;
     }
     .home-product__border {

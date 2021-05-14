@@ -94,6 +94,7 @@ class TaskForm extends Component {
                 name="name"
                 value={this.state.name}
                 onChange={this.onChange}
+                required
               />
             </div>
             <label className="txt-16">Trạng Thái : </label>
