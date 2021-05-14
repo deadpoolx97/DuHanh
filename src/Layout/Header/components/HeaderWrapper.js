@@ -46,7 +46,7 @@ const HeaderWrapper = () => {
             </div>
           </div>
           <div className="header-shop ">
-            <Link to="/map">
+            <Link to="/map" className="header-shop_name">
               <img
                 src="./images/shop-icon.png"
                 alt=""

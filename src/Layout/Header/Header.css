@@ -19,8 +19,9 @@
 }
 .header-shop_name{
     font-size: 16px;
-    color: var(--text-color)
-}
+    color: var(--text-color);
+    text-decoration: none;
+  }
 .header-navbar-list{
     display: flex;
     justify-content: space-between;
