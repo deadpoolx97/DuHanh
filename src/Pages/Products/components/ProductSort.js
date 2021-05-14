@@ -14,8 +14,8 @@ const ProductSort = ({ currentSort, onChange }) => {
       onChange={handleSortChange}
       aria-label="disabled tabs example"
     >
-      <Tab label="Giá thấp tới cao" value="salePrice:ASC"></Tab>
-      <Tab label="Giá cao xuống thấp" value="salePrice:DESC"></Tab>
+      <Tab label="Giá tăng dần" value="salePrice:ASC"></Tab>
+      <Tab label="Giá giảm dần" value="salePrice:DESC"></Tab>
     </Tabs>
   );
 };

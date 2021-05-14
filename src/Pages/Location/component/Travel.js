@@ -8,6 +8,7 @@ const Travel = () => {
         <div className="travel-banner">
           <h1 className="travel-h1">Kẻ du hành</h1>
           <img
+            alt=""
             className=" travel-img"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLdJA70IgfusYEN93qsSU1BMX20jlquZvoQA&usqp=CAU"
           />
@@ -20,6 +21,7 @@ const Travel = () => {
           </h1>
           <div class="grid-container">
             <img
+              alt=""
               className="travel-sale__img"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlENVzcCiiP-Vgp56KyxxsBAp6ZpdwWmVs8Q&usqp=CAU"
             ></img>

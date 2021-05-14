@@ -15,4 +15,3 @@ export const cartTotalSelector = createSelector(
       0
     )
 );
-console.log(cartItemsSelector);

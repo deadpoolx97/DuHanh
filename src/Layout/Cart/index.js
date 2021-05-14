@@ -13,7 +13,10 @@ const CartFeature = (props) => {
   return (
     <div className="app__container">
       <div className="grid wide">
-        <img src="https://t4.ftcdn.net/jpg/00/97/00/05/360_F_97000552_d8RwiZAnFewznisQphPtjyxxRNAAZQ92.jpg" />
+        <img
+          alt=""
+          src="https://t4.ftcdn.net/jpg/00/97/00/05/360_F_97000552_d8RwiZAnFewznisQphPtjyxxRNAAZQ92.jpg"
+        />
         <h3>
           Tổng số tiền của {cartTotal} sản phẩm là : {totalPrice}
         </h3>
