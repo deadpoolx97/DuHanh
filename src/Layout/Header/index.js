@@ -1,9 +1,14 @@
 import { HeaderWrapper, MenuWrapper } from "./components";
 import "./Header.css";
+import React, { useState } from "react";
+import LoginDialog from "./components/LoginDialog";
 
-import React from "react";
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const onClose = () => {
+    setIsOpen(false);
+  };
 
-const index = () => {
   return (
     <header className="header">
       <div className="header-fixed">
@@ -24,10 +29,23 @@ const index = () => {
               </div>
             </li>
             <li className="header-navbar-list__item header-navbar-user">
-              <span className="header-navbar-user__name">
-                <i className="fa fa-user header-icon" />
-                Nam lê
-              </span>
+              <button
+                className="btn"
+                style={{ height: 34 }}
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <span className="header-navbar-user__name">
+                  <i className="fa fa-user header-icon" />
+                  Nam lê
+                </span>
+              </button>
+              {isOpen && (
+                <LoginDialog
+                  open={true}
+                  onClose={() => setIsOpen(false)}
+                  onClose={onClose}
+                />
+              )}
             </li>
           </ul>
         </nav>
@@ -38,4 +56,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Header;

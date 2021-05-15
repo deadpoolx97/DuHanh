@@ -2,7 +2,7 @@ import React from "react";
 import "./Main.css";
 import { Link } from "react-router-dom";
 
-const index = () => {
+const Main = () => {
   return (
     <div className="app__container">
       <div className="grid wide">
@@ -391,4 +391,4 @@ const LIST_3 = [
       "https://product.hstatic.net/1000384816/product/9296805564_1743032699_6417ad3575a34b4681e88dcf2ccf8c6e_medium.jpg",
   },
 ];
-export default index;
+export default Main;

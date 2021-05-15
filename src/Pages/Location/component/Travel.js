@@ -19,7 +19,7 @@ const Travel = () => {
           <h1 className="travel-h1s">
             Liên hệ ngay cho chúng tôi để mua những sản phẩm mà bạn yêu thích!!!
           </h1>
-          <div class="grid-container">
+          <div className="grid-container">
             <img
               alt=""
               className="travel-sale__img"
