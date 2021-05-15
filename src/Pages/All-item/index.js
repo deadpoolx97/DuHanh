@@ -112,14 +112,19 @@ const AllItem = () => {
                       Lịch
                     </div>
                   </div>
-                  <div className="all-color">
+                  <div className="all-color c-12 m-12">
                     <span style={{ fontSize: "14px" }}>Màu sắc</span>
                     <SearchColor onReceiveColor={onSetColor} color={color} />
                   </div>
                 </div>
               </div>
             </div>
+
             <div className="col l-9">
+              <div className="all-color c-12 m-12">
+                <span style={{ fontSize: "14px" }}>Màu sắc</span>
+                <SearchColor onReceiveColor={onSetColor} color={color} />
+              </div>
               <SortItem color={color} />
               <div className="all-menu_list">
                 <div className="all-menu__list-item">
