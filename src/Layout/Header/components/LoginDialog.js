@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
   boxContent: {
     display: "flex",
     alignItems: "center",
-    padding: theme.spacing(6, 1, 2, 1),
+    padding: theme.spacing(6, 2, 2, 2),
     justifyContent: "flex-end",
   },
   textField: {
