@@ -394,7 +394,7 @@
   }
   @media screen and (max-width: 600px) {
     .menu{
-        width: 100% !important;
+        width: 90% !important;
     }
     .header-menu__subnav{
         width: 90% !important;
