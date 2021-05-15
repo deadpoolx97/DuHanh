@@ -315,7 +315,11 @@
     visibility: hidden;
     z-index: -1111;
   }
-  
+  @media screen and (min-width: 1024px) and (max-width:1210px) {    
+  .header-menu__subnav{
+    width: 120%;
+}
+}
   @media screen and (max-width: 1024px) {
     .show-menu-btn,
     .hide-menu-btn {
@@ -382,6 +386,11 @@
            display: none;
        }
      
+  }
+  @media screen and (min-width:601px) and (max-width: 1023px) {
+    .header-menu__subnav{
+        width: 90% !important;
+    }
   }
   @media screen and (max-width: 600px) {
     .menu{
